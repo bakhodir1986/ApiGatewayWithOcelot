@@ -1,6 +1,5 @@
 ﻿using Catalog_Service_BLL;
 using Catalog_Service_Rest_Api.HATEOAS;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Catalog_Service_Rest_Api.Controllers
@@ -36,7 +35,6 @@ namespace Catalog_Service_Rest_Api.Controllers
             return new Dictionary<string, string>() { { "Samsung", "S300" } };
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPost]
         [Consumes("application/json")]
         public IActionResult Post([FromBody] Category category)
@@ -46,7 +44,6 @@ namespace Catalog_Service_Rest_Api.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPost("{categoryid}/items")]
         [Consumes("application/json")]
         public IActionResult PostItem([FromRoute] string categoryid, [FromBody] Item item)
@@ -57,7 +54,6 @@ namespace Catalog_Service_Rest_Api.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPut]
         [Consumes("application/json")]
         public IActionResult Put([FromBody] Category category)
@@ -68,7 +64,6 @@ namespace Catalog_Service_Rest_Api.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPut("{categoryid}/items")]
         [Consumes("application/json")]
         public IActionResult PutItem([FromBody] Item item)
@@ -79,7 +74,6 @@ namespace Catalog_Service_Rest_Api.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "admin")]
         [HttpDelete("{categoryid}")]
         public IActionResult Delete([FromRoute] string categoryid)
         {
@@ -90,7 +84,6 @@ namespace Catalog_Service_Rest_Api.Controllers
             return Ok();
         }
 
-        [Authorize(Roles = "admin")]
         [HttpDelete("{categoryid}/items/{itemId}")]
         public IActionResult DeleteItem([FromRoute] string categoryid, [FromRoute] string itemId)
         {
