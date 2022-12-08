@@ -13,7 +13,7 @@
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/api/category/{categoryid}/items/{page}",
+      "DownstreamPathTemplate": "/api/category/{categoryid}/items",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -21,8 +21,8 @@
           "Port": 44318
         }
       ],
-      "UpstreamPathTemplate": "/gateway/category/{categoryid}/items/{page}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamPathTemplate": "/gateway/category/{categoryid}/items",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
     },
     {
       "DownstreamPathTemplate": "api/v1/cart/{cartid}",

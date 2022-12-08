@@ -29,6 +29,12 @@ namespace Catalog_Service_Rest_Api.Controllers
             return categoryService.GetItems(new Guid(categoryid), page).Select(x => CreateLinksForItem(x));
         }
 
+        [HttpGet("{categoryid}/items", Name = nameof(GetItems))]
+        public Dictionary<string,string> GetItemsProperty([FromRoute] string categoryid)
+        {
+            return new Dictionary<string, string>() { { "Samsung", "S300" } };
+        }
+
         [HttpPost]
         [Consumes("application/json")]
         public IActionResult Post([FromBody] Category category)
