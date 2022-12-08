@@ -1,0 +1,56 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/category",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44318
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/category",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/category/{categoryid}/items/{page}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44318
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/category/{categoryid}/items/{page}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "api/v1/cart/{cartid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/v1/cart/{cartid}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "api/v2/cart/{cartid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/v2/cart/{cartid}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:44317"
+  }
+
+}  
