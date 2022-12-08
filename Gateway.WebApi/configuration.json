@@ -10,7 +10,8 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/category",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
+      "Key": "category"
     },
     {
       "DownstreamPathTemplate": "/api/category/{categoryid}/items",
@@ -22,7 +23,8 @@
         }
       ],
       "UpstreamPathTemplate": "/gateway/category/{categoryid}/items",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "Key": "item"
     },
     {
       "DownstreamPathTemplate": "api/v1/cart/{cartid}",
@@ -47,6 +49,15 @@
       ],
       "UpstreamPathTemplate": "/gateway/v2/cart/{cartid}",
       "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "category",
+        "item"
+      ],
+      "UpstreamPathTemplate": "/"
     }
   ],
   "GlobalConfiguration": {
