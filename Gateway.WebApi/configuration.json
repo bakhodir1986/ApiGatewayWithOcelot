@@ -9,6 +9,17 @@
           "Port": 44318
         }
       ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "category"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      },
       "UpstreamPathTemplate": "/gateway/category",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ],
       "Key": "category"
@@ -22,6 +33,17 @@
           "Port": 44318
         }
       ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "categoryItem"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin"
+      },
       "UpstreamPathTemplate": "/gateway/category/{categoryid}/items",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
       "Key": "item"
@@ -35,6 +57,10 @@
           "Port": 44319
         }
       ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "cart"
+      },
       "UpstreamPathTemplate": "/gateway/v1/cart/{cartid}",
       "UpstreamHttpMethod": [ "GET" ]
     },
@@ -47,6 +73,10 @@
           "Port": 44319
         }
       ],
+      "FileCacheOptions": {
+        "TtlSeconds": 60,
+        "Region": "cart"
+      },
       "UpstreamPathTemplate": "/gateway/v2/cart/{cartid}",
       "UpstreamHttpMethod": [ "GET" ]
     }
