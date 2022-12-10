@@ -10,11 +10,11 @@ namespace Catalog_Service_DAL
 {
     public class CatalogDbContext : DbContext
     {
-        public CatalogDbContext() : base()
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseSqlite("Filename=MyDatabase.db");
         }
-        public DbSet<Category>? Categories { get; set; }
-        public DbSet<Item>? Items { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Item> Items { get; set; }
     }
 }

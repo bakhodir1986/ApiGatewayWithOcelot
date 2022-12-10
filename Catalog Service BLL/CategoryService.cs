@@ -38,7 +38,8 @@ namespace Catalog_Service_BLL
                 Id = Guid.NewGuid(),
                 Name = _category.Name,
                 Image = _category.Image,
-                Parent = categoryRepository.Get(_category.Parent.Id)
+                Parent = categoryRepository.Get(_category.Parent == null ? Guid.NewGuid() 
+                : _category.Parent.Id)
             };
 
             categoryRepository.Add(category);
