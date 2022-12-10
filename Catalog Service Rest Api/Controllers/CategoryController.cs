@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Catalog_Service_Rest_Api.Controllers
 {
     [ApiController]
-    [Route("[api/category]")]
+    [Route("api/category")]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService categoryService;
@@ -29,7 +29,7 @@ namespace Catalog_Service_Rest_Api.Controllers
             return categoryService.GetItems(new Guid(categoryid), page).Select(x => CreateLinksForItem(x));
         }
 
-        [HttpGet("{categoryid}/items", Name = nameof(GetItems))]
+        [HttpGet("{categoryid}/items", Name = nameof(GetItemsProperty))]
         public Dictionary<string,string> GetItemsProperty([FromRoute] string categoryid)
         {
             return new Dictionary<string, string>() { { "Samsung", "S300" } };

@@ -16,6 +16,7 @@ builder.Services.AddScoped<IUrlHelper, UrlHelper>(implementationFactory =>
     return new UrlHelper(actionContext);
 
 });
+builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
 
 var app = builder.Build();
 

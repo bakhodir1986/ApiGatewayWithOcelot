@@ -1,13 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Carting_Service_Web_Api</RootNamespace>
+    <ApplicationInsightsResourceId>/subscriptions/7533f0a9-6f62-430b-844d-4b3ed228a5c9/resourceGroups/NetworkWatcherRG/providers/microsoft.insights/components/CartingServiceWebApi</ApplicationInsightsResourceId>
+    <UserSecretsId>6b9524aa-1273-4357-9a53-bbadb9731aa1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
