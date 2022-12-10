@@ -14,6 +14,7 @@ builder.Services.AddOcelot().AddCacheManager(x =>
 {
     x.WithDictionaryHandle();
 });
+builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["APPLICATIONINSIGHTS_CONNECTION_STRING"]);
 
 var app = builder.Build();
 
