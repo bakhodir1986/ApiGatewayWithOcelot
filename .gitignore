@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 Catalog Service Rest Api/MyDatabase.db
+Carting Service Web Api/CartDb.db

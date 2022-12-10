@@ -30,7 +30,7 @@ namespace Cart_Service_DAL
         {
             var cart = GetCartInfo(cartId);
 
-            cart.Items.Add(item);
+           cart.Items.Add(item);
 
             using (var db = new LiteDatabase(_connectionString))
             {
@@ -64,6 +64,8 @@ namespace Cart_Service_DAL
 
                 var results = col.Query().Where(x => x.Id == id);
 
+                if (results == null) return new Cart();
+
                 return results.SingleOrDefault();
             }
         }
@@ -75,6 +77,8 @@ namespace Cart_Service_DAL
                 var col = db.GetCollection<Cart>("carts");
 
                 var results = col.Query().Where(x => x.Id == id).SingleOrDefault();
+
+                if (results == null) return new List<Item>();
 
                 return results.Items;
             }

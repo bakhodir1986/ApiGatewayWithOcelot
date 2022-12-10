@@ -28,7 +28,7 @@ namespace Cart_Service_BLL
 
             if (cart == null)
             {
-                var newCartId = Guid.NewGuid();
+                var newCartId = cartId;
                 cartRepository.AddCart(new Cart { Id = newCartId });
                 cartRepository.AddCartItem(newCartId, item);
             }
