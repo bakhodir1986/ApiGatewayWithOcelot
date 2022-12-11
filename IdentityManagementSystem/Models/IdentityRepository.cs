@@ -1,4 +1,7 @@
-﻿namespace IdentityManagementSystem.Models
+﻿using System.Data;
+using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
+
+namespace IdentityManagementSystem.Models
 {
     public class IdentityRepository : IIdentityRepository
     {
@@ -6,6 +9,7 @@
         {
             using (var context = new IdentityDbContext())
             {
+                user.Id = Guid.NewGuid();
                 context.Users?.Add(user);
                 context.SaveChanges();
             }
@@ -43,6 +47,7 @@
         {
             using (var context = new IdentityDbContext())
             {
+                role.Id = Guid.NewGuid();
                 context.Role?.Add(role);
                 context.SaveChanges();
             }
@@ -52,6 +57,7 @@
         {
             using (var context = new IdentityDbContext())
             {
+                item.Id = Guid.NewGuid();
                 context.UserRole?.Add(item);
                 context.SaveChanges();
             }
@@ -61,6 +67,7 @@
         {
             using (var context = new IdentityDbContext())
             {
+                item.Id = Guid.NewGuid();
                 context.RolePermission?.Add(item);
                 context.SaveChanges();
             }

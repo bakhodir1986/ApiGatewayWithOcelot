@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 Catalog Service Rest Api/MyDatabase.db
 Carting Service Web Api/CartDb.db
+*.db
+*.db-shm
+*.db-wal

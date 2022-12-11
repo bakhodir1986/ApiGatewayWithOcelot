@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IIdentityRepository, IdentityRepository>();
+builder.Services.AddEntityFrameworkSqlite().AddDbContext<IdentityDbContext>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options => {
@@ -36,6 +37,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using (var client = new IdentityDbContext())
+{
+    client.Database.EnsureCreated();
 }
 
 app.UseHttpsRedirection();
