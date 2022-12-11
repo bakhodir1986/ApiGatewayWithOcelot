@@ -72,5 +72,37 @@ namespace IdentityManagementSystem.Models
                 context.SaveChanges();
             }
         }
+
+        public IEnumerable<User> GetUsers()
+        {
+            using (var context = new IdentityDbContext())
+            {
+                return context.Users.ToList();
+            }
+        }
+
+        public IEnumerable<Roles> GetRoles()
+        {
+            using (var context = new IdentityDbContext())
+            {
+                return context.Role.ToList();
+            }
+        }
+
+        public IEnumerable<UserRoles> GetUserRoles()
+        {
+            using (var context = new IdentityDbContext())
+            {
+                return context.UserRole.ToList();
+            }
+        }
+
+        public IEnumerable<RolePermissions> GetRolePermissions()
+        {
+            using (var context = new IdentityDbContext())
+            {
+                return context.RolePermission.ToList();
+            }
+        }
     }
 }

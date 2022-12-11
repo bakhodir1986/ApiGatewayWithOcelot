@@ -23,6 +23,13 @@ namespace IdentityManagementSystem.Controllers
             return Ok();
         }
 
+        [HttpGet("user")]
+        [Consumes("application/json")]
+        public IActionResult GetUsers()
+        {
+            return Ok(repository.GetUsers());
+        }
+
         [HttpPost("role")]
         [Consumes("application/json")]
         public IActionResult PostRole([FromBody] Roles roles)
@@ -30,6 +37,13 @@ namespace IdentityManagementSystem.Controllers
             if (roles == null) return BadRequest();
             repository.AddRole(roles);
             return Ok();
+        }
+
+        [HttpGet("role")]
+        [Consumes("application/json")]
+        public IActionResult GetRoles()
+        {
+            return Ok(repository.GetRoles());
         }
 
         [HttpPost("userrole")]
@@ -41,6 +55,13 @@ namespace IdentityManagementSystem.Controllers
             return Ok();
         }
 
+        [HttpGet("userrole")]
+        [Consumes("application/json")]
+        public IActionResult GetUserRoles()
+        {
+            return Ok(repository.GetUserRoles());
+        }
+
         [HttpPost("rolepermit")]
         [Consumes("application/json")]
         public IActionResult PostRolePermision([FromBody] RolePermissions roles)
@@ -48,6 +69,13 @@ namespace IdentityManagementSystem.Controllers
             if (roles == null) return BadRequest();
             repository.AddRolePermissions(roles);
             return Ok();
+        }
+
+        [HttpGet("rolepermit")]
+        [Consumes("application/json")]
+        public IActionResult GetRolePermits()
+        {
+            return Ok(repository.GetRolePermissions());
         }
     }
 }
