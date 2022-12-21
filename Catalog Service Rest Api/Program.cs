@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Catalog_Service_BLL;
 using Catalog_Service_DAL;
 using Microsoft.EntityFrameworkCore;
+using Catalog_Service_BLL.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddEntityFrameworkSqlite().AddDbContext<CatalogDbContext>();
+builder.Services.AddGraphQLServer().AddQueryType<QueryGrQL>().
+    AddProjections().AddFiltering().AddSorting();
 //builder.Services.AddScoped<IUrlHelper, UrlHelper>(implementationFactory =>
 //{
 //    var actionContext = implementationFactory.GetService<IActionContextAccessor>().ActionContext;
@@ -43,5 +46,6 @@ using (var client = new CatalogDbContext())
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapGraphQL("/graphql");
 
 app.Run();
