@@ -1,0 +1,14 @@
+﻿C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Controllers\V1\CartController.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Controllers\V2\CartController.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Program.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\obj\Debug\net6.0\Carting Service Web Api.GlobalUsings.g.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\obj\Debug\net6.0\Carting Service Web Api.AssemblyInfo.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\obj\Debug\net6.0\Carting Service Web Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\appsettings.Development.json
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\appsettings.json
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\CartDb.db
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Properties\launchSettings.json
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Properties\serviceDependencies.json
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Properties\serviceDependencies.local.json
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Carting Service Web Api\Properties\ServiceDependencies\local\appInsights1.arm.json

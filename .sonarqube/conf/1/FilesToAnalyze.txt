@@ -1,0 +1,7 @@
+﻿C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\CategoryService.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\Category\Category.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\Category\ICategoryRepository.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\ICategoryService.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\Items\IItemRepository.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\Items\Item.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service BLL\LinkDto.cs

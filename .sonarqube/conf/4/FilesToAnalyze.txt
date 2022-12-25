@@ -1,0 +1,4 @@
+﻿C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service DAL\CatalogDbContext.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service DAL\CategoryRepository.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service DAL\GraphQL\QueryGrQL.cs
+C:\Users\Bakhodir_Radjabov\Desktop\Musor\Study and Grow\Assessment Lead SE\GatewaySolution\ApiGatewayWithOcelot\Catalog Service DAL\ItemRepository.cs
