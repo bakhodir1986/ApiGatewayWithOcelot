@@ -17,13 +17,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cart Service BLL", "Cart Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityManagementSystem", "IdentityManagementSystem\IdentityManagementSystem.csproj", "{16C058AE-0C5A-4937-8B6B-1C381A506923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.WebApi", "Gateway.WebApi\Gateway.WebApi.csproj", "{97703127-85EC-4F36-A3E4-7F0F20849BA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.WebApi", "Gateway.WebApi\Gateway.WebApi.csproj", "{97703127-85EC-4F36-A3E4-7F0F20849BA8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{1D55106D-6FEF-47CD-91FC-896CEE3EDAE0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cart Service", "Cart Service", "{8EBB19EB-AE1F-4969-A2D6-F2C7B98B5890}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog Service", "Catalog Service", "{BFB5392A-17BD-4EA3-B62C-7CC664BF90B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BCE573C6-0E2B-4305-8935-F7DB51044540}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

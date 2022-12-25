@@ -1,7 +1,11 @@
-﻿namespace IdentityManagementSystem.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace IdentityManagementSystem.Models
 {
     public class Roles
     {
-        public string Name { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        public string? Name { get; set; }
     }
 }

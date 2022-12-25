@@ -1,8 +1,12 @@
-﻿namespace IdentityManagementSystem.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace IdentityManagementSystem.Models
 {
     public class UserRoles
     {
-        public string UserName { get; set; }
-        public string RoleName { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        public string? UserName { get; set; }
+        public string? RoleName { get; set; }
     }
 }

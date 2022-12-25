@@ -1,16 +1,10 @@
-﻿using IdentityManagementSystem.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
+using IdentityManagementSystem.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace JwtApp.Controllers
 {
@@ -44,11 +38,11 @@ namespace JwtApp.Controllers
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("DhftOS5uphK3vmCJQrexST1RsyjZBjXWRgJMFPU4"));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            
+
             List<Claim> claimsPermission = new List<Claim>();
             foreach (var action in user.Permissions)
             {
-                claimsPermission.Add(new Claim("Permission", action));
+                claimsPermission.Add(new Claim("Permission", action ?? string.Empty));
             }
 
             var claims = new List<Claim>()
@@ -87,7 +81,7 @@ namespace JwtApp.Controllers
         {
             var currentUser = GetCurrentUser();
 
-            return Ok($"Hi {currentUser.UserName}, you are an {currentUser.RoleName}");
+            return Ok($"Hi {currentUser?.UserName}, you are an {currentUser?.RoleName}");
         }
 
 
@@ -97,10 +91,10 @@ namespace JwtApp.Controllers
         {
             var currentUser = GetCurrentUser();
 
-            return Ok($"Hi {currentUser.UserName}, you are a {currentUser.RoleName}");
+            return Ok($"Hi {currentUser?.UserName}, you are a {currentUser?.RoleName}");
         }
 
-        private UserModel GetCurrentUser()
+        private UserModel? GetCurrentUser()
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
 

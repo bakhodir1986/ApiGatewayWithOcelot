@@ -4,6 +4,11 @@ namespace IdentityManagementSystem.Models
 {
     public class IdentityDbContext : DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Filename=MyDatabase.db");
+        }
+
         public IdentityDbContext()
         {
 
