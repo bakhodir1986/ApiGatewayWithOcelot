@@ -8,17 +8,17 @@ namespace Cart_Service_BLL
 {
     public class CartService : ICartService
     {
-        private readonly ICartRepository cartRepository;
+        private readonly ICartRepository _cartRepository;
 
         public CartService(ICartRepository cartRepository)
         {
-            this.cartRepository = cartRepository;
+            this._cartRepository = cartRepository;
         }
 
         public Cart GetCartInfo(Guid id)
         {
             if (id == Guid.Empty) throw new Exception("Empty cart id");
-            return cartRepository.GetCartInfo(id);
+            return _cartRepository.GetCartInfo(id);
         }
         public void AddCartItem(Guid cartId, Item item)
         {
@@ -29,21 +29,21 @@ namespace Cart_Service_BLL
             if (cart == null)
             {
                 var newCartId = cartId;
-                cartRepository.AddCart(new Cart { Id = newCartId });
-                cartRepository.AddCartItem(newCartId, item);
+                _cartRepository.AddCart(new Cart { Id = newCartId });
+                _cartRepository.AddCartItem(newCartId, item);
             }
 
-            cartRepository.AddCartItem(cartId, item);
+            _cartRepository.AddCartItem(cartId, item);
         }
         public void DeleteCartItem(Guid cartId, int itemId)
         {
             if ((cartId == Guid.Empty) || (itemId == 0)) throw new Exception("Empty cart id");
-            cartRepository.DeleteCartItem(cartId, itemId);
+            _cartRepository.DeleteCartItem(cartId, itemId);
         }
         public IEnumerable<Item> GetCartInfoV2(Guid id)
         {
             if (id == Guid.Empty) throw new Exception("Empty cart id");
-            return cartRepository.GetCartInfoV2(id);
+            return _cartRepository.GetCartInfoV2(id);
         }
     }
 }

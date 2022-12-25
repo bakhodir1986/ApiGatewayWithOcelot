@@ -6,7 +6,7 @@ namespace IdentityManagementSystem.Models
     {
         [Key]
         public Guid Id { get; set; }
-        public string RoleName { get; set; }
-        public string Action { get; set; }
+        public string? RoleName { get; set; }
+        public string? Action { get; set; }
     }
 }

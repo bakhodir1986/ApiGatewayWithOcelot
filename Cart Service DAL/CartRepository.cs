@@ -46,6 +46,8 @@ namespace Cart_Service_DAL
 
             var item = cart.Items.Find(x => x.Id == itemId);
 
+            if (item == null) return;
+
             cart.Items.Remove(item);
 
             using (var db = new LiteDatabase(_connectionString))

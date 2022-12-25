@@ -15,11 +15,15 @@ namespace IdentityManagementSystem.Models
             }
         }
 
-        public UserModel? GetUser(string login, string password)
+        public UserModel? GetUser(string? login, string? password)
         {
+            if (string.IsNullOrWhiteSpace(login)) return null;
+            if (string.IsNullOrWhiteSpace(password)) return null;
+
             using (var context = new IdentityDbContext())
             {
-                var result = context.Users.FirstOrDefault(o => o.UserName.ToLower() == login.ToLower() && o.Password == password);
+                var result = context.Users?.FirstOrDefault(o => !string.IsNullOrEmpty(o.UserName) &&
+                o.UserName.ToLower() == login.ToLower() && o.Password == password);
 
                 if (result == null) return null;
 
@@ -27,17 +31,17 @@ namespace IdentityManagementSystem.Models
 
                 userModel.UserName = result.UserName;
 
-                var roleResult = context.UserRole.FirstOrDefault(o => o.UserName == userModel.UserName);
+                var roleResult = context.UserRole?.FirstOrDefault(o => o.UserName == userModel.UserName);
 
                 if (roleResult == null) return null;
 
                 userModel.RoleName = roleResult.RoleName;
 
-                var permissionResult = context.RolePermission.Where(o => o.RoleName == userModel.RoleName).Select(x => x.Action);
+                var permissionResult = context.RolePermission?.Where(o => o.RoleName == userModel.RoleName).Select(x => x.Action);
 
                 if (permissionResult == null) return null;
 
-                userModel.Permissions = permissionResult.ToList();
+                userModel.Permissions = permissionResult.ToList() ?? new List<string?>();
 
                 return userModel;
             }
@@ -77,7 +81,7 @@ namespace IdentityManagementSystem.Models
         {
             using (var context = new IdentityDbContext())
             {
-                return context.Users.ToList();
+                return context.Users?.ToList() ?? new List<User>();
             }
         }
 
@@ -85,7 +89,7 @@ namespace IdentityManagementSystem.Models
         {
             using (var context = new IdentityDbContext())
             {
-                return context.Role.ToList();
+                return context.Role?.ToList() ?? new List<Roles>();
             }
         }
 
@@ -93,7 +97,7 @@ namespace IdentityManagementSystem.Models
         {
             using (var context = new IdentityDbContext())
             {
-                return context.UserRole.ToList();
+                return context.UserRole?.ToList() ?? new List<UserRoles>();
             }
         }
 
@@ -101,7 +105,7 @@ namespace IdentityManagementSystem.Models
         {
             using (var context = new IdentityDbContext())
             {
-                return context.RolePermission.ToList();
+                return context.RolePermission?.ToList() ?? new List<RolePermissions>();
             }
         }
     }

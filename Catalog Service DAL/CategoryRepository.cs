@@ -31,7 +31,7 @@ namespace Catalog_Service_DAL
         {
             using (var context = new CatalogDbContext())
             {
-                return context.Categories.Find(id);
+                return context.Categories.Find(id) ?? new Category();
             }
         }
 

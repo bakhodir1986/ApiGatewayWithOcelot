@@ -33,7 +33,7 @@ namespace Catalog_Service_DAL
             }
         }
 
-        public Item GetById(Guid id)
+        public Item? GetById(Guid id)
         {
             using (var context = new CatalogDbContext())
             {
